@@ -1,0 +1,16 @@
+<h1>Register</h1>
+<%= message %>
+<form action="/register" method="post">
+    <div>
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" value="<%= username %>">
+    </div>
+    <div>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" value="<%= password %>">
+        <i class="bi bi-eye-slash" id="togglePassword" onclick="showHidePassword()"></i>
+    </div>
+    <input type="submit" value="Register">
+</form>
+<a href="/login">Login</a>
+<a href="/">Index</a>

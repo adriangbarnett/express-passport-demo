@@ -1,0 +1,20 @@
+<h1>Login</h1>
+<% if (message.error) { %>
+    <%= messages.error %>
+<% } %>
+
+<%= message %>
+<form action="/login" method="post">
+    <div>
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" value="<%= username %>">
+    </div>
+    <div>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" value="<%= password %>">
+        <i class="bi bi-eye-slash" id="togglePassword" onclick="showHidePassword()"></i>
+    </div>
+    <input type="submit" value="Login">
+</form>
+<a href="/register">Register</a>
+<a href="/">Index</a>
